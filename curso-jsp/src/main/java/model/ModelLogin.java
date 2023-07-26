@@ -8,6 +8,8 @@ public class ModelLogin implements Serializable {
 	
 	private String login;
 	private String senha;
+	
+	
 	public String getLogin() {
 		return login;
 	}
