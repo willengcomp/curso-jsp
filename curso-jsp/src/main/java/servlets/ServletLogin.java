@@ -50,7 +50,6 @@ public class ServletLogin extends HttpServlet {
 			request.setAttribute("msg", "Informe o login e a senha corretamente");/*o msg é o atributo que será enviado para a tela de login para exibir a mensagem a ele atribuida*/
 			redirecionar.forward(request, response);/*aqui estamos encaminhado a resquisicao e a resposta que queremos após os passo acima*/
 		}
-		
 	}
 
 }
