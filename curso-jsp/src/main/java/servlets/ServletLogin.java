@@ -35,6 +35,8 @@ public class ServletLogin extends HttpServlet {
 			modelLogin.setSenha(senha);
 			
 			if (modelLogin.getLogin().equalsIgnoreCase("admin") && modelLogin.getSenha().equalsIgnoreCase("admin")) {/*simulando login*/
+				request.getSession().setAttribute("usuario", modelLogin.getLogin());/*Adicionando o atributo usuario ligado ao login nessa sessao inicializada*/
+				
 				RequestDispatcher redirecionar = request.getRequestDispatcher("principal/principal.jsp");/*RequestDispatcher redireciona para uma tela, neste caso para a mesma tela de login*/
 				redirecionar.forward(request, response);/*aqui estamos encaminhado a resquisicao e a resposta que queremos após os passo acima*/
 			} else {
