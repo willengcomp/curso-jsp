@@ -1,0 +1,21 @@
+-- Table: public.model_login
+
+-- DROP TABLE IF EXISTS public.model_login;
+
+CREATE TABLE IF NOT EXISTS public.model_login
+(
+    login character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    senha character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT login_unique PRIMARY KEY (login)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.model_login
+    OWNER to postgres;
+    
+    
+INSERT INTO public.model_login(
+login, senha)
+VALUES ('admin', 'admin');
+
